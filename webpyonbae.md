@@ -53,14 +53,21 @@
     """
 
     from bae.core.wsgi import WSGIApplication
-    application = WSGIApplication(app.wsgifunc())    
-####4. 提交代码
+    application = WSGIApplication(app.wsgifunc())  
+    
+
+####4. 添加md文档
+由于是demo，仅简单的处理了一个请求，和一个md文档：webpyonbae.md
+
+可以根据webpy使用方法和markdown使用方法添加更多想要的功能
+  
+####5. 提交代码
 
 	git add .
 	git commit -m "first commit"
 	git push origin master
 
-####5. 重新快速部署
+####6. 重新快速部署
 
 ------
 
