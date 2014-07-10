@@ -9,8 +9,9 @@ import codecs
 import markdown
 import web
 
-HTML_HEAD = """<html><head><meta charset="utf-8"></head><body>
-<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>"""
+HTML_HEAD = """<html><head><meta charset="utf-8"></head>
+<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
+<body>"""
 HTML_TAIL = """</body></html>"""
 
 urls = ('/', 'Index')
