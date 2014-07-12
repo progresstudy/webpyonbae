@@ -8,20 +8,19 @@ import codecs
 
 import markdown
 import web
-
-HTML_HEAD = """<html><head><meta charset="utf-8"></head>
-<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
-<body>"""
-HTML_TAIL = """</body></html>"""
+from web.contrib.template import render_jinja
 
 urls = ('/', 'Index')
+### Templates
+render = render_jinja('templates',
+             encoding = 'utf-8')
 
 class Index:
     def GET(self):
         with codecs.open("webpyonbae.md", "r+", encoding="utf-8") as f:
             body = unicode(f.read())
             body = markdown.markdown(body)
-        return HTML_HEAD + body + HTML_TAIL
+        return render.demo({"html_body": body})
         #return "Hello World"
 
 app = web.application(urls, globals())
